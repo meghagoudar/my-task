@@ -1,115 +1,472 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>my taskS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
+<style>
+    /*project activity*/
+    .title-pro{
+        margin-top: 2%;
+        display: flex;
+        margin-bottom: 2%;
+        padding: 0% 20%;
+    }
+    .style-btn{
+        border: 1px solid #dddddd;
+        background: #f5fcfd;
+        border-radius: 10px;
+    }
+    .area-const{
+        background-color: #e6f8f966;
+
+    }
+    .styl0-btn{
+        margin-right: 74%;
+        margin-top: 4%;
+
+    }
+    .project-title .tit-head{
+        font-size: 19px;
+
+        margin: 2% 4%;
+
+    }
+    .project-title{
+        box-shadow: 0px 2px 2px -2px grey;
+
+    }
+
+    .style-cols {
+        padding: 1% 4%;
+    }
+    .color-active{
+        background-color: #20639B;
+        color: white;
+    }
+    .color2-active{
+        background-color: #ED553B;
+        color: white;
+    }
+
+    /*involved-team*/
+    .scnd-part{
+        margin: 3% 1%;
+    }
+
+    .project-title .style-head{
+        margin:6% 6%;
+    }
+    .dev-image img{
+        border-radius:50%;
+    }
+    .designation{
+        color: grey;
+        font-size: 15px;
+    }
+    .no-padd{
+        padding: 0%;
+    }
+    .dev-image{
+        text-align:center;
+        margin-bottom: 23%;
+    }
+    .btn-team{
+        color: #fff;
+        background-color: #09b330;
+        border-color: #28a745;
+    }
+    .card-tit{
+        font-size: 17px;
+    }
+    /*manage activity*/
+    .pro-other{
+        padding: 0% 2%;
+    }
+    .calc{
+        font-size: 13px;
+        margin:12% 2%;
+    }
+    .color{
+        color:red;
+    }
+    /*responsive*/
+    @media (min-width:0px) and (max-width:320px){
+        .title-pro {
+            margin-top: 2%;
+            padding: 0% 5%;
+            margin-bottom: 0%;
+            display: block;
+
+    }}
+</style>
 <body>
-<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+
+<!--project Activity-->
+<div class="container">
+
+    <div class="area-const">
+        <div class="project-title">
+            <div class="row">
+                <div class="col-md-6 col-6">
+            <h1 class="tit-head">Project Activity</h1></div>
+                <div class="col-md-6 col-6">
+                    <div class="style-cols">
+            <button type="button" class="close " aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+                    </div></div>
+            </div>
+        </div>
+    <div class="row">
+
+        <div class="col-md-9 col-9">
+            <div class="title-pro">
+
+                <div class="dropdown">
+                    <button class="btn  dropdown-toggle mr-4 style-btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Month
+                    </button>
+                    <!--<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">-->
+                        <!--&lt;!&ndash;<a class="dropdown-item" href="#"></a>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<a class="dropdown-item" href="#"></a>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<a class="dropdown-item" href="#"></a>&ndash;&gt;-->
+                    <!--</div>-->
+                </div>
+                <div class="dropdown">
+                    <button class="btn  dropdown-toggle mr-4 style-btn" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Range
+                    </button>
+                    <!--<div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">-->
+                        <!--<a class="dropdown-item" href="#"></a>-->
+                        <!--<a class="dropdown-item" href="#"></a>-->
+                        <!--<a class="dropdown-item" href="#"></a>-->
+                    <!--</div>-->
+                </div>
+                <div class="dropdown">
+                    <button class="btn  dropdown-toggle mr-4 style-btn color-active" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Last
+                    </button>
+                    <!--<div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">-->
+                        <!--<a class="dropdown-item" href="#"></a>-->
+                        <!--<a class="dropdown-item" href="#"></a>-->
+                        <!--<a class="dropdown-item" href="#"></a>-->
+                    <!--</div>-->
+                </div>
+                <div class="dropdown">
+                    <button class="btn  dropdown-toggle mr-4 style-btn color2-active" type="button" id="dropdownMenuButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Current
+                    </button>
+                    <!--<div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">-->
+                        <!--<a class="dropdown-item" href="#"></a>-->
+                        <!--<a class="dropdown-item" href="#"></a>-->
+                        <!--<a class="dropdown-item" href="#"></a>-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="dropdown text-right styl0-btn">
+                <button class="btn  style-btn mt-2" type="button" id="dropdownMenuButton4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Today
+                </button>
+                <!--<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">-->
+                <!--<a class="dropdown-item" href="#"></a>-->
+                <!--<a class="dropdown-item" href="#"></a>-->
+                <!--<a class="dropdown-item" href="#"></a>-->
+                <!--</div>-->
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div id="chartContainer" style="height: 300px; width: 70%;background-color: #e6f8f966; margin:0 auto"></div>
+</div>
+</div>
+<!--involved team & manage activity-->
+<div class="container">
+
+<div class="scnd-part mt-3">
+
+
+
+        <div class="row">
+    <div class="col-md-4 col-4 no-padd">
+<div class="secnd-section">
+
+    <div class="card" style="width: 20rem;background-color: #f5fcfd;border: none;margin-bottom:10%;">
+        <div class="project-title">
+            <div class="row">
+                <div class="col-md-6 col-6">
+                    <h1 class="tit-head style-head">Involved Team</h1></div>
+                <div class="col-md-6 col-6">
+                    <div class="style-cols">
+                        <button type="button" class="close " aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div></div>
+            </div>
+        </div>
+
+        <div class="card-body">
+        <div class="row">
+
+            <div class="col-md-4 col-4 no-padd">
+                <div class="dev-image">
+            <img src="image/developer-image.jpg"></div></div>
+            <div class="col-md-8 col-8 no-padd">
+
+
+            <h5 class="card-tit">Jack Williams</h5>
+                <h6 class="designation">UI/UX developer</h6>
+
+            </div>
+        </div>
+            <div class="row">
+                <div class="col-md-4 col-4 no-padd">
+                    <div class="dev-image">
+                        <img src="image/developer-image.jpg"></div></div>
+                <div class="col-md-8 col-8 no-padd">
+
+
+                    <h5 class="card-tit">Kate Beckinsale</h5>
+                    <h6 class="designation">Project Manager</h6>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4  col-4 no-padd">
+                    <div class="dev-image">
+                        <img src="image/developer-image.jpg"></div></div>
+                <div class="col-md-8 col-8 no-padd">
+
+
+                    <h5 class="card-tit">Mickey Thompson</h5>
+                    <h6 class="designation">Designer</h6>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-4 no-padd">
+                    <div class="dev-image">
+                        <img src="image/developer-image.jpg"></div></div>
+                <div class="col-md-8 col-8 no-padd">
+
+
+                    <h5 class="card-tit">Brian Dergan</h5>
+                    <h6 class="designation">Web Designer</h6>
+
+                </div>
+            </div>
+
+  <div class="button text-center">
+      <button type="button" class="btn dropdown-toggle btn-team ">Add Teammate</button>
+
+  </div>
+        </div>
+    </div>
+</div>
+    </div>
+            <!--manager-activity-->
+    <div class="col-md-8  no-padd">
+
+        <div class="area-const ">
+            <div class="project-title">
+                <div class="row">
+                    <div class="col-md-6 col-6">
+                        <h1 class="tit-head style-man">Manager Activity</h1></div>
+                    <div class="col-md-6 col-6">
+                        <div class="style-cols">
+                            <button type="button" class="close " aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div></div>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-md-9 col-9">
+                    <div class="title-pro pro-other">
+
+                        <div class="dropdown">
+                            <button class="btn  dropdown-toggle mr-4 style-btn" type="button" id="dropdownMenuButton6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                February
+                            </button>
+
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn  dropdown-toggle mr-4 style-btn" type="button" id="dropdownMenuButton7" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Incoming Phone Calls
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-3">
+                      <h4 class="calc">Total :<span class="color"> 23.574</span></h4>
+                </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="third-section">
+
+          <div id="chart" style="height: 300px; width: 100%;background-color: #e6f8f966; margin:0 auto"></div>
+        </div>
+    </div>
+    </div>
+        </div>
+</div>
+</div>
+
+
 <script>
     window.onload = function () {
 
-        var chart = new CanvasJS.Chart("chartContainer", {
+        var chart1 = new CanvasJS.Chart("chartContainer", {
             animationEnabled: true,
-            title:{
-                text: "Monthly Expenses, 2016-17"
+            backgroundColor: "#e6f8f966",
+
+            title: {
+                text: ""
             },
-            axisY :{
-                includeZero: false,
-                prefix: "$"
+            axisX: {
+                valueFormatString: "DDD MMM DD",
+                minimum: new Date(2021, 2, 14, 24),
+                maximum: new Date(2021, 2, 21, 5)
+            },
+            axisY: {
+                title: ""
+            },
+            legend: {
+                verticalAlign: "top",
+                horizontalAlign: "right",
+                dockInsidePlotArea: true
             },
             toolTip: {
                 shared: true
             },
-            legend: {
-                fontSize: 13
-            },
             data: [{
-                type: "splineArea",
+                name: "Last",
                 showInLegend: true,
-                name: "Salaries",
-                color: "darkgreen",
-                xValueFormatString: "MMM YYYY",
+                legendMarkerType: "square",
+                type: "splineArea",
+                color: "#92DFF3",
+                markerSize: 0,
                 dataPoints: [
-                    { x: new Date(2016, 2), y: 30000 },
-                    { x: new Date(2016, 3), y: 35000 },
-                    { x: new Date(2016, 4), y: 30000 },
-                    { x: new Date(2016, 5), y: 30400 },
-                    { x: new Date(2016, 6), y: 20900 },
-                    { x: new Date(2016, 7), y: 31000 },
-                    { x: new Date(2016, 8), y: 30200 },
-                    { x: new Date(2016, 9), y: 30000 },
-                    { x: new Date(2016, 10), y: 33000 },
-                    // { x: new Date(2016, 11), y: 38000 },
-                    { x: new Date(2017, 0),  y: 38900 },
-                    { x: new Date(2017, 1),  y: 39000 }
+                    {x: new Date(2021, 2, 15), y: 40},
+                    {x: new Date(2021, 2, 16), y: 30},
+                    {x: new Date(2021, 2, 17), y: 45},
+                    {x: new Date(2021, 2, 18), y: 42},
+                    {x: new Date(2021, 2, 19), y: 25},
+                    {x: new Date(2021, 2, 20), y: 20},
+                    {x: new Date(2021, 2, 21), y: 0}
                 ]
             },
                 {
-                    type: "splineArea",
+                    name: "Current",
                     showInLegend: true,
-                    name: "Office Cost",
-                    yValueFormatString: "$#,##0",
-                    dataPoints: [
-                        { x: new Date(2016, 2), y: 20100 },
-                        { x: new Date(2016, 3), y: 16000 },
-                        { x: new Date(2016, 4), y: 14000 },
-                        { x: new Date(2016, 5), y: 18000 },
-                        { x: new Date(2016, 6), y: 18000 },
-                        { x: new Date(2016, 7), y: 21000 },
-                        { x: new Date(2016, 8), y: 22000 },
-                        { x: new Date(2016, 9), y: 25000 },
-                        { x: new Date(2016, 10), y: 23000 },
-                        { x: new Date(2016, 11), y: 25000 },
-                        { x: new Date(2017, 0), y: 26000 },
-                        { x: new Date(2017, 1), y: 25000 }
-                    ]
-                },
-                {
+                    legendMarkerType: "square",
                     type: "splineArea",
-                    showInLegend: true,
-                    name: "Entertainment",
-                    yValueFormatString: "$#,##0",
+                    color: "#ca5fa6",
+                    markerSize: 6,
                     dataPoints: [
-                        { x: new Date(2016, 2), y: 10100 },
-                        { x: new Date(2016, 3), y: 6000 },
-                        { x: new Date(2016, 4), y: 3400 },
-                        { x: new Date(2016, 5), y: 4000 },
-                        { x: new Date(2016, 6), y: 9000 },
-                        { x: new Date(2016, 7), y: 3900 },
-                        { x: new Date(2016, 8), y: 4200 },
-                        { x: new Date(2016, 9), y: 5000 },
-                        { x: new Date(2016, 10), y: 14300 },
-                        { x: new Date(2016, 11), y: 12300 },
-                        { x: new Date(2017, 0), y: 8300 },
-                        { x: new Date(2017, 1), y: 6300 }
-                    ]
-                },
-                {
-                    type: "splineArea",
-                    showInLegend: true,
-                    yValueFormatString: "$#,##0",
-                    name: "Maintenance",
-                    dataPoints: [
-                        { x: new Date(2016, 2), y: 1700 },
-                        { x: new Date(2016, 3), y: 2600 },
-                        { x: new Date(2016, 4), y: 1000 },
-                        { x: new Date(2016, 5), y: 1400 },
-                        { x: new Date(2016, 6), y: 900 },
-                        { x: new Date(2016, 7), y: 1000 },
-                        { x: new Date(2016, 8), y: 1200 },
-                        { x: new Date(2016, 9), y: 5000 },
-                        { x: new Date(2016, 10), y: 1300 },
-                        { x: new Date(2016, 11), y: 2300 },
-                        { x: new Date(2017, 0), y: 2800 },
-                        { x: new Date(2017, 1), y: 1300 }
+                        {x: new Date(2021, 2, 15), y: 20},
+                        {x: new Date(2021, 2, 16), y: 35},
+                        {x: new Date(2021, 2, 17), y: 29},
+                        {x: new Date(2021, 2, 18), y: 10},
+                        {x: new Date(2021, 2, 19), y: 53},
+                        {x: new Date(2021, 2, 20), y: 45},
+                        {x: new Date(2021, 2, 21), y: 60}
                     ]
                 }]
         });
-        chart.render();
+        chart1.render();
+        CanvasJS.addColorSet("blueShades",
+            [//colorSet Array
 
-    }
-</script>
+                "#7AD7F0",
+                "#7AD7F0",
+                "#7AD7F0",
+                "#7AD7F0",
+                "#7AD7F0"
+            ]);
 
-<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+
+
+
+            var chart2 = new CanvasJS.Chart("chart", {
+                colorSet: "blueShades",
+                backgroundColor: "#e6f8f966",
+
+
+
+                title: {
+                    text: " "
+                },
+                toolTip:{
+                    cornerRadius: 10,
+                    endingShape: 'rounded',
+
+                },
+                data: [
+                    {
+                        type: "column",
+                        dataPoints: [
+                            { x: 1, y: 600 },
+                            { x: 2, y: 500},
+                            { x: 3, y: 550 },
+                            { x: 4, y: 650 },
+                            { x: 5, y: 835 },
+                            { x: 6, y: 550 },
+                            { x: 7, y: 300 },
+                            { x: 8, y: 150 },
+                            { x: 9, y: 250},
+                            { x: 10, y: 300 },
+                            { x: 11, y: 350},
+                            { x: 12, y: 400 },
+                            { x: 13, y: 450 },
+                            { x: 14, y: 500 },
+                            { x: 15, y: 550 },
+                            { x: 16, y: 600 },
+                            { x: 17, y: 650 },
+                            { x: 18, y: 750},
+                            { x: 19, y: 800},
+                            { x: 20, y: 775 },
+                            { x: 21, y: 700 },
+                            { x: 22, y: 550 },
+                            { x: 23, y: 200 },
+                            { x: 24, y: 100 },
+                            { x: 25, y: 150 },
+                            { x: 26, y: 250},
+                            { x: 27, y: 450 },
+                            { x: 28, y: 762 },
+                            { x: 29, y: 700 },
+                            { x: 30, y: 600 },
+                            { x: 31, y: 400}
+
+                        ]
+                    }
+                ]
+            });
+
+            chart2.render();
+        }
+        </script>
+
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</div>
+</div>
 </body>
 </html>
