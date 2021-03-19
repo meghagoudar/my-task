@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dynamic HTML Creation - JS</title>
+	<style>
+	.bulb{
+        width: 400px;
+        height: 400px;
+    }
+	</style>
+</head>
+<body>
+<h2>Its all about DOM </h2>
+    <!--task1: create a webpage containing 2 input fields and a button on click of button the content  
+        of input  of first input box should be copied into second input box -->
+<input type="text" id="inputdata1" placeholder="username">
+<input type="text" id="inputdata2" placeholder="username">
+
+<button onclick="copytxt()">submit</button>
+
+
+
+<!-- task2: turn on bulb onClick  on th image   -->
+
+<div class="bulb">
+    <img  onmouseover="swithchon()" id="bulbimage" src="../images/pic_bulboff.gif" alt="bulb" >
+</div>
+
+<!-- on click of the button h1 txt has to change -->
+<div >
+    <h4 id="introtxt">javascript begginner</h4>
+
+</div>
+<div>
+    <button onclick="changetxt()">change text</button>
+</div>
+
+<!-- write example for getElementById() selector -->
+
+<ul >
+    <li id="list1">HTML1</li>
+    <li >HTML2</li>
+    <li>HTML3</li>
+    <li>HTML4</li>
+    <li>XHTML</li>
+
+</ul>
+<!-- write an example for getElementByClassName() -->
+<div class="list-items">i trust you buddy!!!</div>
+
+<button  onclick="change()">click me</button>
+
+
+
+
+
+<script>
+// task1///
+    var input1,input2;
+ function copytxt(){
+ var input1 = document.getElementById('inputdata1');
+ console.log(input1)
+ var input2 = document.getElementById('inputdata2');
+ console.log(input2)
+ input2.value=input1.value;
+
+ }
+
+
+ //task2//
+
+ function swithchon(){
+    var bulb = document.getElementById('bulbimage');
+    if(bulb.src.match("bulbon")){
+        bulb.src = "../images/pic_bulboff.gif";
+  } else {
+    bulb.src = "../images/pic_bulbon.jpg";
+    }
+
+ }
+ 
+ //task3
+
+ function changetxt(){
+    document.getElementById('introtxt').innerHTML='I like javascript';
+ }
+
+// task4
+// getelementbyid()
+
+document.getElementById('list1').style.border = '2px solid gold';
+
+//getelementbyClass()
+function change(){
+var x = document.getElementsByClassName('list-items')[0].innerHTML = 'I trust  u too buddy!!!';
+
+}
+//getelementbytagname()
+
+var y = document.getElementsByTagName("h2")[0].style.color = 'red';
+
+
+// queryselectorall()
+   document.querySelectorAll('ul li')[1].style.backgroundColor='red';
+   document.querySelectorAll('ul li')[2].style.backgroundColor='green';
+   document.querySelectorAll('ul li')[3].style.backgroundColor='gold';
+
+//    queryselector()
+document.querySelector('ul li').style.backgroundColor='purple';
+
+
+
+
+
+ 
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+    </html>
